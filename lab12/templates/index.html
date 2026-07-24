@@ -1,0 +1,6 @@
+<!DOCTYPE html><html><head><title>Gesture</title>
+<style>body{font-family:Arial;text-align:center;margin-top:80px}#gesture{font-size:64px;color:blue}</style>
+</head><body><h1>Gesture Detection</h1><div id='gesture'>Waiting...</div>
+<script>
+setInterval(()=>{fetch('/gesture').then(r=>r.json()).then(d=>document.getElementById('gesture').innerText=d.gesture)},200);
+</script></body></html>
